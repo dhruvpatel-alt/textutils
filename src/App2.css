@@ -1,0 +1,124 @@
+     *{margin:0;
+        padding:0;}
+.container::before{
+    content: "";
+    position: absolute;
+    background-image: url(https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80);
+    top: 0;
+    left: 0;
+width: 100vw; 
+height: 100vh;
+z-index: -1;
+}
+    .container{
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: transparent;
+        
+    }
+    #text{
+        text-decoration: none;
+        text-align: center;
+        /* width: 30vw; */
+        background-color: transparent;
+        font-size:10vh;
+        color: white;
+        /* height: 10vh; */
+    }
+    #text:hover{
+        color:#aef600;
+    }
+    #text2:hover{
+        color:#00ff72;
+    }
+    #text2{
+        text-decoration: none;
+        /* height: 10vh; */
+        /* width: 25vw; */
+        text-align: center;
+        margin:5vh;
+        background-color: transparent;
+        font-size:5vh;
+        color: white;
+    }
+    #text3{
+        text-decoration: none;
+        /* height: 10vh; */
+        /* width: 25vw; */
+        text-align: center;
+        margin:5vh;
+        background-color: transparent;
+        font-size:5vh;
+        color: white;
+    }
+    .buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height:10vh;
+    }
+   .buttons button{
+    height:10vh;
+        text-align: center;
+        background:transparent;
+        font-size:4vh;
+        text-decoration: none;
+        color: white;
+
+        border: none;
+        width: 25vw;
+   }
+    .buttons a{
+        height:10vh;
+        text-align: center;
+        background:transparent;
+        font-size:4vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: white;
+margin-left: 10px;
+        width: 25vw;
+       
+    }
+    .buttons a:hover{
+        
+        color:black;
+    }
+    .buttons button:hover{
+     
+        color:black;
+    }
+    @media screen and (max-width:600px ) {
+        #text{
+font-size: 7vh;
+        }
+        .buttons a{
+            width: 25vw;
+            height: 10vh;
+        font-size:2vh;
+        }
+        .buttons button{
+            width: 25vw;
+            height: 10vh;
+        font-size:2vh;
+        }
+    
+    } 
+    @media screen and (max-width:1170px )and (min-width:600px) {
+        .buttons a{
+            width: 18vw;
+            height: 10vh;
+        }
+        .buttons button{
+            width: 18vw;
+            height: 10vh;
+        }
+   
+    }
