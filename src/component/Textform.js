@@ -4,7 +4,7 @@ export default function Textform(props) {
     str = str.replace(/(^\s*)|(\s*$)/gi,"");
     str = str.replace(/[ ]{2,}/gi," ");
     str = str.replace(/\n /,"\n");
-    return str.split(' ').length;
+    return str.split(' ').filter((element)=>{return element.length!==0}).length;
  }
   function countcharacter(str) {
     str = str.replace(/(^\s*)|(\s*$)/gi,"");
@@ -56,11 +56,11 @@ export default function Textform(props) {
   {/* <label for="mybox" className="form-label">Example textarea</label> */}
   <textarea className="form-control" onChange={handleonchange} value={text} placeholder="ENTER TEXT HERE" id="exampleFormControlTextarea1" rows="5"></textarea>
 </div>
-  <button className="btn btn-warning mx-4" style={{color:props.mode==='light'?'black':'white'}} onClick={uppercaseclick}>convert to uppercase</button>
-  <button className="btn btn-primary mx-2" style={{color:props.mode==='light'?'black':'white'}} onClick={lowercaseclick}>convert to lowercase</button>
-  <button className="btn btn-success mx-2" style={{color:props.mode==='light'?'black':'white'}}  onClick={clearclick}>clear text</button>
-  <button className="btn btn-dark mx-2"  onClick={copyclick}>copy text</button>
-  <button className="btn btn-light mx-2" onClick={removespaceclick}>Remove Extra Spaces</button>
+  <button className="btn btn-warning mx-2 my-1" style={{color:props.mode==='light'?'black':'white'}} onClick={uppercaseclick}>convert to uppercase</button>
+  <button className="btn btn-primary mx-2 my-1" style={{color:props.mode==='light'?'black':'white'}} onClick={lowercaseclick}>convert to lowercase</button>
+  <button className="btn btn-success mx-2 my-1" style={{color:props.mode==='light'?'black':'white'}}  onClick={clearclick}>clear text</button>
+  <button className="btn btn-dark mx-2 my-1"  onClick={copyclick}>copy text</button>
+  <button className="btn btn-light mx-2 my-1" onClick={removespaceclick}>Remove Extra Spaces</button>
         </div>
         <div className="container my-5" style={{color:props.mode==='light'?'black':'white'}}>
           <h5>YOUR TEXT SUMMARY</h5>
