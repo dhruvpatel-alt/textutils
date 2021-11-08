@@ -1,13 +1,40 @@
 import React from 'react'
 
-export default function about() {
+export default function About() {
+  const toggleshow=()=>{
+    var collapse1=document.getElementById("collapseOne");
+    if(collapse1.className=="collapse show"){
+collapse1.className="collapse";
+    }
+    else{
+      collapse1.className="collapse show";
+    }
+  }
+  const toggleshow1=()=>{
+    var collapse1=document.getElementById("collapseTwo");
+    if(collapse1.className=="collapse show"){
+collapse1.className="collapse";
+    }
+    else{
+      collapse1.className="collapse show";
+    }
+  }
+  const toggleshow2=()=>{
+    var collapse1=document.getElementById("collapseThree");
+    if(collapse1.className=="collapse show"){
+collapse1.className="collapse";
+    }
+    else{
+      collapse1.className="collapse show";
+    }
+  }
     return (
         <div className="about">
         <div className="accordion" id="accordionExample">
 <div className="card">
 <div className="card-header" id="headingOne">
   <h2 className="mb-0">
-    <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+    <button className="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"  onClick={toggleshow}>
       Collapsible Group Item #1
     </button>
   </h2>
@@ -22,7 +49,7 @@ export default function about() {
 <div className="card">
 <div className="card-header" id="headingTwo">
   <h2 className="mb-0">
-    <button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+    <button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" onClick={toggleshow1}>
       Collapsible Group Item #2
     </button>
   </h2>
@@ -36,7 +63,7 @@ export default function about() {
 <div className="card">
 <div className="card-header" id="headingThree">
   <h2 className="mb-0">
-    <button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+    <button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" onClick={toggleshow2}>
       Collapsible Group Item #3
     </button>
   </h2>

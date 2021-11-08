@@ -4,12 +4,12 @@ import './App.css';
 import Textform from './component/Textform';
 import React, { useState } from 'react';
 import Alert from './component/Alert';
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route
-// } from "react-router-dom";
-// import About from './component/About';
+import About from './component/About'; 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 function App() {
   const[mode,setmode]=useState('light');
   const[alert,setalert]=useState(null);
@@ -26,6 +26,7 @@ setTimeout(() => {
   const togglemode=()=>{
     if(mode==='light'||mode==='danger'){
       setmode('dark');
+      document.getElementById("defaultCheck2").checked = false;
       let text=document.getElementsByClassName("container-fluid")
       text[0].style.color="white";
       let home=document.getElementsByClassName("nav-a active")
@@ -49,6 +50,7 @@ setTimeout(() => {
   }
   const redmode=()=>{
     if(mode==='light'||mode==='dark'){
+      document.getElementById("defaultCheck1").checked = false;
       setmode('danger');
       document.body.style.backgroundColor = "#ff0000ba";
       let text=document.getElementsByClassName("container-fluid")
@@ -75,21 +77,20 @@ setTimeout(() => {
   
   return (
 <>
-{/* <Router> */}
+<Router>
 <Navbar title="TEXTUTILS" mode={mode} redmode={redmode} togglemode={togglemode} />
 <Alert alert={alert}/>
 <div className="container">
-{ /* <Switch>
+ <Switch>
           <Route exact path="/about">
-            <About />
-          </Route> */ }
-      
-          {/* <Route exact path="/"> */}
+            <About/>
+          </Route>  
+          <Route  path="/">
 <Textform  showalert={showalert} heading="Enter the text to analize" mode={mode}/>
-          {/* </Route>
-        </Switch> */}
+           </Route>
+        </Switch> 
 </div>
-{/* </Router> */}
+</Router>
 </>
   );
 }
